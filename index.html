@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웅의 노선도</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h2>노선 관리 시스템</h2>
+    <nav class="nav">
+        <button class='station'>역</button>
+        <button class='nosun'>노선</button>
+        <button class='gugan'>구간</button>
+        <button class='output'>출력</button>
+    </nav>
+    <section>
+        <p>역 이름</p>
+        <input class="S_input" placeholder="역 이름을 입력해주세요.">
+        <button class="S_add">역 추가</button>
+        <h3>🚉 지하철 역 목록</h3>
+        <table class="S_table">
+            <tr>
+                <th>역 이름</th>
+                <th>설정</th>
+            </tr>
+        </table>
+    </section>
+<script src="index.js" type="module"/></script>
+<script src="./util/functions.js" type="module"/></script>
+</body>
+</html>
+
