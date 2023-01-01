@@ -1,16 +1,16 @@
 const $S_INPUT = document.querySelector('.S_input')
 const $S_ADD = document.querySelector('.S_add')
 const $S_TABLE = document.querySelector('.S_table')
- 
+
 const station = []
 
 const renderStation = () => {
         const newRow = $S_TABLE.insertRow()
         station.forEach((name)=>{
         newRow.innerHTML = `
-        <td>${name}</td>
-        <td><button class='S_delete'>삭제</button></td>
-        ` 
+        <td class='S_delete'>${name}</td>
+        <td><button>삭제</button></td>
+        `;
     })
 }
 
@@ -39,4 +39,19 @@ const checkStation = () => {
 $S_ADD.addEventListener('click',()=>{
     checkStation()
 })
- 
+
+// 아래 부터는 삭제 영역
+
+const deleteStation = (e) => {
+    console.log(e.forEach((it)=>console.log(it.innerText)))
+}
+
+$S_TABLE.addEventListener('click',(e) => {
+    let $stationNAME = document.querySelector('.S_delete')
+
+    console.log($S_TABLE.closest())
+    // e.stopPropagation()
+    // if(window.confirm('삭제 하시겠습니까?')){
+    //     deleteStation($stationNAME)
+    // }
+})
